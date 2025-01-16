@@ -750,7 +750,7 @@ function debian_install ()
         output "Node.js already installed"
     fi
 
-
+    NODE_VERSION_STRING="v14"
     if [[ `node --version | cut -d'.' -f 1` != $NODE_VERSION_STRING ]]; then
         output "Something went wrong in installing/updating node. This is likely a fault in your apt config. Can't continue"
         exit 0
@@ -1204,7 +1204,7 @@ MONGO_INSTALLED=false
 REDIS_INSTALLED=false
 PM2_OVERRIDE=false
 NODE_OVERRIDE=false
-NODE_VERSION=10.x
+NODE_VERSION=14.x
 NODE_VERSION_STRING=v10
 UPDATE_MODE=false
 GIT_ASK=false
