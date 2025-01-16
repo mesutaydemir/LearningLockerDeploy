@@ -443,7 +443,7 @@ function base_install ()
                     output_log "Cloning main repo with user: ${GIT_USER}"
                 fi
             else
-                MAIN_REPO=https://github.com/LearningLocker/learninglocker
+                MAIN_REPO=https://github.com/mesutaydemir/learninglocker
             fi
             # clone repo
             git clone -q -b ${GIT_BRANCH} $MAIN_REPO ${WEBAPP_SUBDIR}
@@ -535,7 +535,7 @@ function xapi_install ()
         # TODO - make this do a max itteration of say 3 attempts to clone
         while true; do
             output_log "attempting git clone for xapi, branch: $XAPI_BRANCH"
-            git clone -q -b ${XAPI_BRANCH} https://github.com/LearningLocker/xapi-service.git ${XAPI_SUBDIR}
+            git clone -q -b ${XAPI_BRANCH} https://github.com/mesutaydemir/xapi-service.git ${XAPI_SUBDIR}
             if [[ ! -d ${XAPI_SUBDIR} ]]; then
                 output_log "git clone appears to have failed"
                 break
@@ -2490,7 +2490,7 @@ if [[ $SETUP_AMI == true ]]; then
         rm -R /tmp/deploy
     fi
     # git clone
-    git clone https://github.com/LearningLocker/deploy deploy
+    git clone https://github.com/mesutaydemir/deploy deploy
 fi
 
 
